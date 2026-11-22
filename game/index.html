@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WICKLIGHT — Wick steals back the starlight</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #050714; }
+  #wrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #050714; }
+  #game { display: block; width: min(100vw, 266.67vh); height: min(37.5vw, 100vh); image-rendering: auto; touch-action: none; cursor: pointer; }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" aria-label="WICKLIGHT: a top-down stealth game. Wick the lamplighter steals starlight from the Black Lighthouse, hiding from the Keepers' vision cones"></canvas>
+</div>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
